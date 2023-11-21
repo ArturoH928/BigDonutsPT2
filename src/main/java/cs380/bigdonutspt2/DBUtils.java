@@ -50,7 +50,7 @@ public class DBUtils {
         ResultSet resultSet = null;
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bigdonuts", "root", "Britishgreen12!?");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bigdonuts", "root", "toor");
             psCheckUserExists = connection.prepareStatement("SELECT * FROM users WHERE username = ?");
             psCheckUserExists.setString(1, username);
             resultSet = psCheckUserExists.executeQuery();
@@ -61,7 +61,7 @@ public class DBUtils {
                 alert.setContentText("You cannot use this username.");
                 alert.show();
             } else {
-                psInsert = connection.prepareStatement("INSERT INTO users (username, password, FaveDonutShop VALUES (?, ?, ?))");
+                psInsert = connection.prepareStatement("INSERT INTO users (username, password, FaveDonutShop) VALUES (?, ?, ?)");
                 psInsert.setString(1, username);
                 psInsert.setString(2, password);
                 psInsert.setString(3, FaveDonutShop);
@@ -111,7 +111,7 @@ public class DBUtils {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bigdonuts", "root", "Britishgreen12!?");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bigdonuts", "root", "toor");
             preparedStatement = connection.prepareStatement("SELECT password, FaveDonutShop FROM users WHERE username = ?");
             preparedStatement.setString(1, username);
             resultSet = preparedStatement.executeQuery();

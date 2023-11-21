@@ -21,7 +21,7 @@ public class Controller implements Initializable {
     private TextField tf_username;
 
     @FXML
-    private PasswordField tf_password;
+    private TextField tf_password;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

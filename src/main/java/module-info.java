@@ -7,7 +7,7 @@ module cs380.bigdonutspt2 {
     requires org.kordamp.bootstrapfx.core;
     requires javafx.graphics;
     requires java.sql;
-    requires jfxrt;
+
 
     opens cs380.bigdonutspt2 to javafx.fxml;
     exports cs380.bigdonutspt2;

@@ -10,22 +10,21 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs380.bigdonutspt2.Controller">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="239.0" style="-fx-background-color: #000000;">
          <children>
             <ImageView fitHeight="243.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../java/cs380/bigdonutspt2/DonutLogo.png" />
-               </image>
-            </ImageView>
+                  <Image url="@DonutLogo.png" />
+               </image></ImageView>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="415.0" style="-fx-background-color: #000000;">
          <children>
             <ImageView fitHeight="57.0" fitWidth="65.0" layoutX="150.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../java/cs380/bigdonutspt2/lock.png" />
+                  <Image url="@lock.png" />
                </image>
             </ImageView>
             <Label layoutX="34.0" layoutY="143.0" text="Username:" textFill="RED">
@@ -38,8 +37,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="tf_username" layoutX="150.0" layoutY="146.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter Username" />
-            <PasswordField fx:id="tf_password" layoutX="150.0" layoutY="210.0" promptText="Enter Password" />
+            <TextField fx:id="tf_username" layoutX="144.0" layoutY="143.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter Username" />
             <Button fx:id="button_login" layoutX="120.0" layoutY="263.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="118.0" style="-fx-cursor: hand; -fx-background-color: #ff0000;" text="Login">
                <font>
                   <Font size="18.0" />
@@ -55,6 +53,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
+            <PasswordField fx:id="tf_password" layoutX="139.0" layoutY="207.0" promptText="Enter Password" />
          </children>
       </AnchorPane>
    </children>
